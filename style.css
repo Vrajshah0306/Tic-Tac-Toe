@@ -1,1 +1,44 @@
+body{
+    background-color: grey;
+    text-align: center;
+   
+    
+}
+#title {
+    margin-top: 100px;
+}
+h5{
+    display: inline;
+}
+#TopCircle {
+   background-color: rgb(255, 255, 255);
+   height:750px;
+   width: 400px;
+   margin: auto;
+   transform: translate(0,10%);
+   border: 5px solid black;
+   border-radius: 10px;
+   
+}
+.grid {
+    display: grid;
+    background-color: black;
+    border-radius: 10px;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    gap: 5px;
+    padding: 5px;
+    height: 400px;
+    width: 400px;
+    margin: auto;
+    transform: translate(-1%,0);
+}
 
+.grid div {
+    background-color: rgb(255, 255, 255);
+    border: 2px solid black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
