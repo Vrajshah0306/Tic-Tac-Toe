@@ -1,11 +1,9 @@
 body{
     background-color: grey;
     text-align: center;
-   
-    
 }
 #title {
-    margin-top: 100px;
+    margin-top: 20px;
 }
 h5{
     display: inline;
@@ -18,7 +16,6 @@ h5{
    transform: translate(0,10%);
    border: 5px solid black;
    border-radius: 10px;
-   
 }
 .grid {
     display: grid;
@@ -33,7 +30,6 @@ h5{
     margin: auto;
     transform: translate(-1%,0);
 }
-
 .grid div {
     background-color: rgb(255, 255, 255);
     border: 2px solid black;
