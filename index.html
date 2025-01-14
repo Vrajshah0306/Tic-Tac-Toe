@@ -3,41 +3,38 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="Tik-Tac-Toe">
-    <title>Tik-Tac-Toe</title>
+    <title>Tic-Tac-Toe</title>  <!-- Title -->
     <link rel="stylesheet" href="style.css">
     <link rel="icon" href="tic-tac-toe_icon.png">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap">
 </head>
 <body>
-    <div id="TopCircle">
-        <h1 id="title">Tik-Tac-Toe</h1>
-        <hr id="line">
-        <div>
-            <h4 id="PlayerX">Player X: </h4> 
-            <h4 id="PlayerO">Player O: </h4>
-            <h4 id="Draw">Draw: </h4>
+    <div id="OuterRec">
+        <h1 id="title"><u>Tic-Tac-Toe</u></h1>
+        <hr class="line">
+        <div id="scoreboard">
+            <h4 id="PlayerX">Player X: 0</h4> 
+            <h4 id="PlayerO">Player O: 0</h4>
+            <h4 id="Draw">Draw: 0</h4>
         </div>
-        <hr>
+        <hr class="line">
         <h4 id="nextturn">Current turn: Player X</h4>
-    <div class="grid">
-        
-        <div class="square" id="square_1" onclick="test(this.id)"></div>
-        <div class="square" id="square_2" onclick="test(this.id)"></div>
-        <div class="square" id="square_3" onclick="test(this.id)"></div>
-        <div class="square" id="square_4" onclick="test(this.id)"></div>
-        <div class="square" id="square_5" onclick="test(this.id)"></div>
-        <div class="square" id="square_6" onclick="test(this.id)"></div>
-        <div class="square" id="square_7" onclick="test(this.id)"></div>
-        <div class="square" id="square_8" onclick="test(this.id)"></div>
-        <div class="square" id="square_9" onclick="test(this.id)"></div>
-       
-        
-
+        <div class="grid">
+            <div class="square" id="square_1" onclick="test(this.id)"></div>
+            <div class="square" id="square_2" onclick="test(this.id)"></div>
+            <div class="square" id="square_3" onclick="test(this.id)"></div>
+            <div class="square" id="square_4" onclick="test(this.id)"></div>
+            <div class="square" id="square_5" onclick="test(this.id)"></div>
+            <div class="square" id="square_6" onclick="test(this.id)"></div>
+            <div class="square" id="square_7" onclick="test(this.id)"></div>
+            <div class="square" id="square_8" onclick="test(this.id)"></div>
+            <div class="square" id="square_9" onclick="test(this.id)"></div>
+        </div>
+        <br>
+        <button class="button" id="reset_board" onclick="resetboard()" > Reset Board</button> 
+        <button class="button" id="reset_points" onclick="resetpoints()"> Reset Points</button>    
+        <button class="button" id="reset_all" onclick="resetpoints(); resetboard()">Reset All</button>
+        <script src="app.js"></script>
     </div>
-    <br>
-    <button id="reset_board" onclick="resetboard()" > Reset Board</button> 
-    <button id="reset_points" onclick="resetpoints()">Reset Points</button>    
-    <button id="reset_all" onclick="resetpoints(); resetboard()">Reset All</button>
-    <script src="app.js"></script>
-</div>
 </body>
 </html>
