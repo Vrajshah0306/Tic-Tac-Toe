@@ -1,25 +1,28 @@
 body{
     background-color: grey;
     text-align: center;
+   
+    
 }
 #title {
     margin-top: 20px;
+    color: rgb(48, 211, 81);
 }
-h5{
-    display: inline;
-}
-#TopCircle {
-   background-color: rgb(255, 255, 255);
+#OuterRec {
+   background-color: rgb(173, 237, 186);
    height:750px;
    width: 400px;
    margin: auto;
    transform: translate(0,10%);
-   border: 5px solid black;
+   border: 5px solid rgb(48, 211, 81);
    border-radius: 10px;
+   
 }
-.grid {
+.grid 
+{
     display: grid;
-    background-color: black;
+    background-color: rgb(48, 211, 81);
+    border: rgb(48, 211, 81);
     border-radius: 10px;
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: 1fr 1fr 1fr;
@@ -31,10 +34,24 @@ h5{
     transform: translate(-1%,0);
 }
 .grid div {
-    background-color: rgb(255, 255, 255);
+    background-color: rgb(173, 237, 186);
     border: 2px solid black;
     display: flex;
     align-items: center;
     justify-content: center;
     cursor: pointer;
 }
+.line{
+    height: 8px;
+    background-color: rgb(48, 211, 81);
+    border: #000000;
+}
+/* #scoreboard { 
+    text-align: left;
+} */
+ .button {
+    background-color: rgb(173, 237, 186);
+    border-radius:10px;
+    box-shadow: 0px 0px 2px 2px rgb(0, 0, 0);
+    margin-right: 10px;
+ }
