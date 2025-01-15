@@ -5,6 +5,7 @@ var count= 0;
 var X_points = 0;
 var O_points =0;
 var Draw_points = 0;
+var Color_Count=0;
 function test(id)
 {
     const Current = document.getElementById(id); //Current Square
@@ -16,7 +17,8 @@ function test(id)
     if(this.last == a)
     {
         Current.style.fontFamily = "'Press Start 2P'"; //Player O font 
-        Current.style.color = "blue";  //Player O font Color
+        colorcheck(Current);
+        // Current.style.color = "blue";  //Player O font Color
         Current.style.fontSize = "80px"; //Player O font size
         Current.innerHTML = b;
         this.last=b;
@@ -25,7 +27,8 @@ function test(id)
     else
     {
         Current.style.fontFamily = "'Press Start 2P'"; //Player X font 
-        Current.style.color = "red"; //Player X font Color
+        // Current.style.color = "red"; //Player X font Color
+        colorcheck(Current);
         Current.style.fontSize = "80px"; //Player X font size
         Current.innerHTML = a;
         this.last=a;
@@ -40,8 +43,83 @@ function test(id)
         resetboard();
         return;
     }
+}
+function colorchange()
+{
+    this.Color_Count++;
+    if(this.Color_Count % 2 === 0)
+    {
+        document.querySelector(".grid").style.backgroundColor = 'purple'; //Temp, Not done with this part yet 
 
+    }
+    else
+    {
+        document.body.style.backgroundColor = 'rgb(88, 90, 86)'; //Changing the Background Color.
+        document.getElementById("OuterRec").style.backgroundColor = 'black'; //changing the color of the background in the box
+        document.getElementById("OuterRec").style.borderColor = 'purple'; //changing the color od the boarder of the box
+        document.getElementById("title").style.color = 'purple'; //title
+        const line = document.querySelectorAll(".line");  //Used to call all the <hr> that have the class set to line.
+        for(var i = 0; i < line.length; i++ ) //for loop to change background color.
+        {
+            line[i].style.backgroundColor = 'purple';  //background color being changed.
+        }
+        document.getElementById("scoreboard").style.color = 'white';  //changing the color of the scoreboard.
+        
+        document.getElementById("nextturn").style.color = "white";  //changing the color of teh text for who's turn it is.
+        document.querySelector(".grid").style.backgroundColor = 'purple'; //changing the gaps in the grid to be purple.
+        const squares = document.querySelectorAll(".square"); //caling each square in the grid
+        for(var i = 0; i<squares.length; i++)
+        {
+            squares[i].style.borderColor = 'white'; //changing every border color for every square in the grid
+            squares[i].style.backgroundColor = 'black';  //changing the background color for every square in the grid
+            if(squares[i].textContent != "") //checking if the specific square isn't empty
+            {
+                if(squares[i].textContent === "X")
+                {
+                    squares[i].style.color = 'rgb(3, 161, 161)';
+                } 
+                else if(squares[i].textContent === "O")
+                {
+                    squares[i].style.color = 'yellow';
+                }
+            }
+        }
+        const Button = document.querySelectorAll(".button");
+        for(var i = 0; i < Button.length; i++ )
+        {
+            Button[i].style.backgroundColor = "purple";
+            Button[i].style.borderColor = "white";        
+        }
+        document.getElementById("PageEnding").style.borderColor = "white";
+        document.getElementById("Email").style.color = 'yellow';
+    }
     
+}
+
+function colorcheck(curr)
+{
+    if(this.Color_Count % 2 === 0)
+    {
+        if(this.last == a)
+        {
+            curr.style.color = 'blue';
+        }
+        else 
+        {
+            curr.style.color = 'red';
+        }
+    }   
+    else
+    {
+        if(this.last == a)
+        {
+            curr.style.color = 'yellow';
+        }
+        else 
+        {
+           curr.style.color = 'rgb(3, 161, 161)';
+        }
+    }
 }
 
 function check_winner() 
@@ -79,13 +157,19 @@ function check_winner()
             {
                 this.X_points++;
                 document.getElementById("PlayerX").textContent = "Player X: " + this.X_points;
-                resetboard();
-                alert("Player X has Won!!!");
+                // grid[0][i].classList.add("win");
+                // setTimeout(() => 
+                // {
+                    resetboard();
+                    alert("Player X has Won!!!");
+                // }, 1000);
+                    
             }
             else if(grid[0][i].textContent === "O")
             {
                 this.O_points++;
                 document.getElementById("PlayerO").textContent = "Player O: " + this.O_points;
+                grid[0][i].classList.add("win");
                 resetboard();
                 alert("Player O has Won!!!");
             }
@@ -114,15 +198,15 @@ function check_winner()
             {
                 this.X_points++;
                 document.getElementById("PlayerX").textContent = "Player X: " + this.X_points;
-                resetboard();
                 alert("Player X has Won!!!");
+                resetboard();
             }
             else if(grid[0][2].textContent === "O")
             {
                 this.O_points++;
                 document.getElementById("PlayerO").textContent = "Player O: " + this.O_points;
-                resetboard();
                 alert("Player O has Won!!!");
+                resetboard();
             }
         }
 }
