@@ -1,15 +1,13 @@
 body{
     background-color: grey;
     text-align: center;
-   
-    
 }
 #title {
     margin-top: 20px;
     color: rgb(48, 211, 81);
 }
 #OuterRec {
-   background-color: rgb(173, 237, 186);
+   background-color: rgb(255, 255, 255);
    height:750px;
    width: 400px;
    margin: auto;
@@ -34,17 +32,17 @@ body{
     transform: translate(-1%,0);
 }
 .grid div {
-    background-color: rgb(173, 237, 186);
+    background-color: rgb(255, 255, 255);
     border: 2px solid black;
     display: flex;
     align-items: center;
     justify-content: center;
     cursor: pointer;
-}
+    }
 .line{
     height: 8px;
     background-color: rgb(48, 211, 81);
-    border: #000000;
+    border: none;
 }
 /* #scoreboard { 
     text-align: left;
@@ -53,5 +51,16 @@ body{
     background-color: rgb(173, 237, 186);
     border-radius:10px;
     box-shadow: 0px 0px 2px 2px rgb(0, 0, 0);
-    margin-right: 10px;
+    margin-right: px;
+    cursor: pointer;
+ }
+ #PageEnding {
+    cursor: pointer;
+    color: blue;
+    margin-top: 90px;
+    border: 2px solid #000000;
+ }
+ .win
+ {
+    background-color: green !important;
  }
