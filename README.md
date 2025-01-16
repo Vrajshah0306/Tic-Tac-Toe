@@ -1,3 +1,4 @@
+
 # Tic-Tac-Toe
 
 Welcome to **Tic-Tac-Toe**, a simple web-based game! This application allows two players to play the classic game of Tic-Tac-Toe, keeping track of scores and turns. If you have any feedback or suggestions to improve this project, please feel free to reach out to me at [vrajrshah@yahoo.com](mailto:vrajrshah@yahoo.com). Constructive criticism is highly appreciated.
@@ -16,7 +17,7 @@ Welcome to **Tic-Tac-Toe**, a simple web-based game! This application allows two
 
 ## Project Overview
 
-**Tic-Tac-Toe** is a simple web application that allows two players to play the classic Tic-Tac-Toe game. Players take turns marking a 3x3 grid with "X" and "O." The game tracks the score for both players and the number of draws. When a player wins, the game announces the winner, and the board is reset. Players can reset the board or the points at any time. The game provides a user-friendly interface and keeps track of the score and current turn.
+**Tic-Tac-Toe** is a simple web application that allows two players to play the classic Tic-Tac-Toe game. Players take turns marking a 3x3 grid with "X" and "O." The game tracks the score for both players and the number of draws. When a player wins, the game announces the winner and highlights the winning boxes. The board is then reset, and players can choose to reset the points as well. The game provides a user-friendly interface and keeps track of the score and current turn. Additionally, players can toggle between two color schemes for the game board.
 
 ---
 
@@ -28,6 +29,8 @@ Welcome to **Tic-Tac-Toe**, a simple web-based game! This application allows two
 - **Game reset**: Resets the board after each game and keeps a running score.
 - **Input validation**: Ensures that squares cannot be clicked multiple times during the game.
 - **Buttons for resetting**: Options to reset the board, reset points, or reset everything.
+- **Color Change**: Toggle between two color schemes for the game board.
+- **Winning Box Highlighting**: When a player wins, the winning boxes are highlighted with a distinct color.
 
 ---
 
@@ -35,7 +38,7 @@ Welcome to **Tic-Tac-Toe**, a simple web-based game! This application allows two
 
 - **HTML**: Structure of the webpage.
 - **CSS**: Styling of the application (linked as `style.css`).
-- **JavaScript**: Logic for game functionality, win detection, and input validation (linked as `app.js`).
+- **JavaScript**: Logic for game functionality, win detection, input validation, color change, and highlighting the winning boxes (linked as `app.js`).
 
 ---
 
@@ -59,9 +62,10 @@ Welcome to **Tic-Tac-Toe**, a simple web-based game! This application allows two
 2. The game board will appear with nine empty squares.
 3. Click on a square to make your move (X for Player X and O for Player O).
 4. The current turn will be displayed at the top of the page.
-5. After each move, the game checks for a winner. If a player wins, an alert will show the winner, and the board will reset.
+5. After each move, the game checks for a winner. If a player wins, an alert will show the winner, and the winning squares will be highlighted. The board will then reset.
 6. You can reset the board using the "Reset Board" button, reset the points using the "Reset Points" button, or reset everything with the "Reset All" button.
 7. The scoreboard displays the total points for Player X, Player O, and Draws.
+8. You can toggle between two color schemes using the "Color Change" button.
 
 ### Example:
 
@@ -69,7 +73,7 @@ Welcome to **Tic-Tac-Toe**, a simple web-based game! This application allows two
 - Player X clicks on the top-left square and marks it with "X".
 - Player O clicks on the center square and marks it with "O".
 - The game continues with players alternating turns.
-- If Player X wins, an alert will say "Player X has Won!!!" and the board will reset.
+- If Player X wins, an alert will say "Player X has Won!!!", the winning boxes will be highlighted, and the board will reset.
 
 ---
 
