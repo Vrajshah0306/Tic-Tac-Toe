@@ -48,10 +48,10 @@ body{
     text-align: left;
 } */
  .button {
-    background-color: rgb(173, 237, 186);
+    background-color:rgb(66, 197, 92);
     border-radius:10px;
     box-shadow: 0px 0px 2px 2px rgb(0, 0, 0);
-    margin-right: px;
+    margin-right: 4px;
     cursor: pointer;
  }
  #PageEnding {
@@ -60,7 +60,4 @@ body{
     margin-top: 90px;
     border: 2px solid #000000;
  }
- .win
- {
-    background-color: green !important;
- }
+ 
